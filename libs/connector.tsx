@@ -1,7 +1,8 @@
-import React from 'react'
-import { Button, Spacer } from '@geist-ui/react'
+import React, { useMemo } from 'react'
+import { Button, Description, Spacer, Text } from '@geist-ui/react'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { useWeb3React } from '@web3-react/core'
+import { Web3Provider } from '@ethersproject/providers'
 
 const injected = new InjectedConnector({
   supportedChainIds: [
@@ -14,17 +15,23 @@ const injected = new InjectedConnector({
 })
 
 const Connector: React.FC<unknown> = () => {
-  const web3React = useWeb3React()
+  const { activate, active, account } = useWeb3React<Web3Provider>()
+  const message = useMemo<JSX.Element>(() => {
+    if (!active) return <>{'Unconnected'}</>
+    return <Text type="success">{`${account.slice(0, 10)}...${account.slice(-10)}`}</Text>
+  }, [active, account])
 
   const clickHandler = async () => {
     try {
-      await web3React.activate(injected, walletError => {
+      if (active) return alert('Already linked')
+      await activate(injected, walletError => {
         if (walletError.message.includes('user_canceled')) {
           return alert('You canceled the operation, please refresh and try to reauthorize.')
         }
         alert(`Failed to connect: ${walletError.message}`)
       })
     } catch (err) {
+      console.log(err)
       alert('Failed to connect Wallet.')
     }
   }
@@ -32,6 +39,8 @@ const Connector: React.FC<unknown> = () => {
   return (
     <div>
       <Spacer y={1.5} />
+      <Description title="Current status" content={message} />
+      <Spacer y={1} />
       <Button type="secondary-light" size="small" auto onClick={clickHandler}>
         Connect to Wallet
       </Button>
