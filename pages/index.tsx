@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { Page, Text } from '@geist-ui/react'
+import { Divider, Page, Text } from '@geist-ui/react'
 import Connector from '../libs/connector'
+import Sign from '../libs/sign'
 
 const Index: React.FC<unknown> = () => {
   return (
@@ -8,8 +9,9 @@ const Index: React.FC<unknown> = () => {
       <Text h2 size={22}>
         Hello imToken
       </Text>
-      <Text size={14}>Click connect wallet to start using the DApp.</Text>
       <Connector />
+      <Divider y={4} />
+      <Sign />
       <style jsx>{`
         :global(.home main) {
           padding-top: 0;
