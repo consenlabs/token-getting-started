@@ -357,6 +357,11 @@
   resolved "https://registry.yarnpkg.com/@geist-ui/themes/-/themes-1.1.0.tgz#3644195ae699eb904ccf29677e8ab51b050d74d1"
   integrity sha512-N13wlIOeEU8QkOu4mxg5AcF7DpfLNBcZhW/YDMRVEch0ehPl8Y+g4/JW1A4uT6E5W3USSybslmhjFZ7HH8T2LA==
 
+"@types/node@^14.14.41":
+  version "14.14.41"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.41.tgz#d0b939d94c1d7bd53d04824af45f1139b8c45615"
+  integrity sha512-dueRKfaJL4RTtSa7bWeTK1M+VH+Gns73oCgzvYfHZywRCoPSd8EkXBL0mZ9unPTveBn+D9phZBaxuzpwjWkW0g==
+
 aes-js@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.0.0.tgz#e21df10ad6c2053295bcbb8dab40b09dbea87e4d"

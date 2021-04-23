@@ -1,13 +1,9 @@
-## Getting started for imToken Applicatoin
+## Getting started for Pure proejct (without framework)
 
-This is a sample project using Web3 to access imToken App, 
-you can access the information provided by imToken in your Web App by referring to this template project.
+1. Install dependencies: `npm i`
+2. Run the example locally: `npm run dev`
 
 ### Documentation
 
 - [Getting started for imToken](#)
 - [WebView APIs](#)
-
-### Licenses
-
-[MIT](./LICENSE)
