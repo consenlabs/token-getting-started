@@ -1,0 +1,9 @@
+#app {
+  width: calc(750pt - 180pt);
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 16pt;
+  box-sizing: border-box;
+  position: relative;
+}
