@@ -38,11 +38,11 @@ const Connector: React.FC<unknown> = () => {
 
   return (
     <div>
-      <Text size={14}>1. Click connect wallet to start using the DApp.</Text>
+      <Text font="14px">1. Click connect wallet to start using the DApp.</Text>
       <Spacer />
       <Description title="Current status" content={message} />
       <Spacer />
-      <Button type="secondary-light" size="small" auto onClick={clickHandler}>
+      <Button type="secondary-light" scale={2 / 3} auto onClick={clickHandler}>
         Connect to Wallet
       </Button>
     </div>

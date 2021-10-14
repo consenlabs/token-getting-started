@@ -25,17 +25,17 @@ const Sign: React.FC<unknown> = () => {
 
   return (
     <div>
-      <Text size={14}>2. Signing of the following strings:</Text>
+      <Text font="14px">2. Signing of the following strings:</Text>
       <Card>
         <Code>{MESSAGE}</Code>
       </Card>
-      <Spacer y={0.5} />
+      <Spacer h={0.5} />
       <Snippet symbol="" text={['Signature Result:', result]} width="100%" />
-      <Spacer y={0.5} />
+      <Spacer h={0.5} />
       <Button
         type="secondary-light"
         auto
-        size="small"
+        scale={2 / 3}
         disabled={!isConnected}
         onClick={clickHandler}>
         Sign

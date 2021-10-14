@@ -5,12 +5,12 @@ import Sign from '../libs/sign'
 
 const Index: React.FC<unknown> = () => {
   return (
-    <Page size="mini" className="home">
-      <Text h2 size={22}>
+    <Page pt="5vh" className="home">
+      <Text h2 font="22px">
         Hello imToken
       </Text>
       <Connector />
-      <Divider y={4} />
+      <Divider h={4} />
       <Sign />
       <style jsx>{`
         :global(.home main) {
